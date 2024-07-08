@@ -2,60 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="s6fchamorro.Views.Estudiantes"
-             Title="Estudiantes">
-    <VerticalStackLayout Spacing="20"
-                         Padding="20">
+             Title="Estudiantes"
+              BackgroundColor="#e3e3e3">
+    <VerticalStackLayout Spacing="5"
+                         Padding="10">
         <Label 
-            Text="Semana6 : consumo WS"
+            Text="Semana6 : Consumo WS"
             VerticalOptions="Center" 
             FontSize="20"
             HorizontalOptions="Center" />
 
 
-        <TableView Intent="Data"
-                   Margin="20,20">
-            <TableRoot>
-                <TableSection Title="Estudiantes">
-                    
-                    
-                </TableSection>
-            </TableRoot>
-            
-        </TableView>
 
-        <Grid  RowSpacing="10"
-        ColumnSpacing="10"
-       >
+        <Grid  RowSpacing="3"
+        ColumnSpacing="1" BackgroundColor="Black">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
 
             </Grid.ColumnDefinitions>
             <Label 
             Grid.Column="0"
             Grid.Row="0"
-            Text="ID"/>
+                BackgroundColor="White"
+                
+            Text="CODIGO"/>
             <Label
              Grid.Row="0"
              Grid.Column="1"
+                BackgroundColor="White"
     
      Text="Nombre"/>
             <Label 
          Grid.Row="0"
          Grid.Column="2"
-    
+        BackgroundColor="White"
       Text="Apellido"/>
 
             <Label 
              Grid.Row="0"
              Grid.Column="3"
-    
+            BackgroundColor="White"
           Text="Edad"/>
         </Grid>
 
@@ -66,24 +59,25 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid  RowSpacing="10"
-                               ColumnSpacing="10"
+                               ColumnSpacing="1"
+                               BackgroundColor="Black"
                               >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                
 
                             </Grid.ColumnDefinitions>
-                            <Label x:Name="lblID"  Grid.Column="0"  Text="{Binding  idestudiantes}"/>
-                            <Label x:Name="lblnombre"  Grid.Column="1" Text="{Binding  nombre}"/>
-                            <Label x:Name="lblapellido" Grid.Column="2" Text="{Binding  apellido}"/>
-                            <Label x:Name="lbEdad" Grid.Column="3" Text="{Binding  edad}"/>
+                            <Label x:Name="lblID"  Grid.Column="0" BackgroundColor="AliceBlue"  Text="{Binding  idestudiantes}"/>
+                            <Label x:Name="lblnombre"  Grid.Column="1" BackgroundColor="AliceBlue"  Text="{Binding  nombre}"/>
+                            <Label x:Name="lblapellido" Grid.Column="2" BackgroundColor="AliceBlue" Text="{Binding  apellido}"/>
+                            <Label x:Name="lbEdad" Grid.Column="3" BackgroundColor="AliceBlue" Text="{Binding  edad}"/>
                             
                         </Grid>
                     </ViewCell>
