@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using s6fchamorro.Models;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 
@@ -22,4 +23,17 @@ public partial class Estudiantes : ContentPage
 		est= new ObservableCollection<Models.Estudiante>(mostrar);
 		listestudiante.ItemsSource=est;
 	}
+
+    private void btnAgregarEstudiante_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new Views.vAgregar());
+
+    }
+
+    private void listestudiante_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+		var objetosEstudiante=(Estudiante)e.SelectedItem;
+		Navigation.PushAsync(new vEliminar(objetosEstudiante));
+
+    }
 }

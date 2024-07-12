@@ -36,8 +36,7 @@
             <Label
              Grid.Row="0"
              Grid.Column="1"
-                BackgroundColor="White"
-    
+                BackgroundColor="White"  
      Text="Nombre"/>
             <Label 
          Grid.Row="0"
@@ -54,7 +53,7 @@
 
 
 
-        <ListView x:Name="listestudiante">
+        <ListView x:Name="listestudiante" ItemSelected="listestudiante_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -74,7 +73,7 @@
                                 
 
                             </Grid.ColumnDefinitions>
-                            <Label x:Name="lblID"  Grid.Column="0" BackgroundColor="AliceBlue"  Text="{Binding  idestudiantes}"/>
+                            <Label x:Name="lblID"  Grid.Column="0" BackgroundColor="AliceBlue"  Text="{Binding  codigo}"/>
                             <Label x:Name="lblnombre"  Grid.Column="1" BackgroundColor="AliceBlue"  Text="{Binding  nombre}"/>
                             <Label x:Name="lblapellido" Grid.Column="2" BackgroundColor="AliceBlue" Text="{Binding  apellido}"/>
                             <Label x:Name="lbEdad" Grid.Column="3" BackgroundColor="AliceBlue" Text="{Binding  edad}"/>
@@ -84,7 +83,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        <Button x:Name="btnAgregarEstudiante" Text="Agregar Estudiante"
+                Clicked="btnAgregarEstudiante_Clicked"/>
 
         <!--<ListView x:Name="listestudiante">
             <ListView.ItemTemplate>

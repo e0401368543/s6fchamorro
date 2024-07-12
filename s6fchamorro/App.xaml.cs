@@ -8,7 +8,7 @@ namespace s6fchamorro
         {
             InitializeComponent();
 
-            MainPage = new Estudiantes();
+            MainPage = new NavigationPage(new Estudiantes());
         }
     }
 }
